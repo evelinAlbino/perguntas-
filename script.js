@@ -1,7 +1,13 @@
 const questions = [
   {
-    question: "Qual é a fórmula da área de um círculo?",
-    options: ["πr²", "2πr", "πd", "r²"],
+    question: "Qual é a principal causa do desmatamento nas florestas tropicais?",
+    options: ["A) Expansão da agricultura e pecuária]
+
+B) Construção de infraestrutura urbana
+
+C) Turismo não controlado
+
+D) Mudanças climáticas naturais"],
     answer: "πr²"
   },
   {
