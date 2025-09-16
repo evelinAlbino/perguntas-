@@ -1,14 +1,8 @@
 const questions = [
   {
     question: "Qual é a principal causa do desmatamento nas florestas tropicais?",
-    options: ["A) Expansão da agricultura e pecuária]
-
-B) Construção de infraestrutura urbana
-
-C) Turismo não controlado
-
-D) Mudanças climáticas naturais"],
-    answer: "πr²"
+    options: ["A) Expansão da agricultura e pecuária],B) Construção de infraestrutura urbana,C) Turismo não controlado,D) Mudanças climáticas naturais"],
+    answer: "A) Expansão da agricultura e pecuária]"
   },
   {
     question: "Quem foi o primeiro presidente do Brasil?",
