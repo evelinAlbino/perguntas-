@@ -1,92 +1,143 @@
-const questions = [
-  {
-    question: "Qual é a principal causa do desmatamento nas florestas tropicais?",
-    options: ["A) Expansão da agricultura e pecuária],B) Construção de infraestrutura urbana,C) Turismo não controlado,D) Mudanças climáticas naturais"],
-    answer: "A) Expansão da agricultura e pecuária]"
-  },
-  {
-    question: "Quem foi o primeiro presidente do Brasil?",
-    options: ["Getúlio Vargas", "Juscelino Kubitschek", "Deodoro da Fonseca", "Dom Pedro II"],
-    answer: "Deodoro da Fonseca"
-  },
-  {
-    question: "Qual é a principal função das mitocôndrias?",
-    options: ["Produção de energia", "Síntese de proteínas", "Armazenamento de DNA", "Reprodução celular"],
-    answer: "Produção de energia"
-  },
-  {
-    question: "Em que ano o Brasil proclamou a sua independência?",
-    options: ["1889", "1822", "1500", "1750"],
-    answer: "1822"
-  },
-  {
-    question: "Qual é o símbolo químico do Ouro?",
-    options: ["O", "Ag", "Au", "Fe"],
-    answer: "Au"
-  },
-  {
-    question: "Qual é o maior continente do mundo?",
-    options: ["África", "América", "Ásia", "Europa"],
-    answer: "Ásia"
-  },
-  {
-    question: "Qual é a capital da França?",
-    options: ["Londres", "Paris", "Berlim", "Roma"],
-    answer: "Paris"
-  },
-  {
-    question: "Quem escreveu a obra 'Dom Casmurro'?",
-    options: ["Machado de Assis", "José de Alencar", "Monteiro Lobato", "Clarice Lispector"],
-    answer: "Machado de Assis"
-  },
-  {
-    question: "Qual é a principal função da fotossíntese?",
-    options: ["Produção de oxigênio", "Produção de água", "Produção de nutrientes", "Produção de glicose"],
-    answer: "Produção de glicose"
-  },
-  {
-    question: "O que é a fotossíntese?",
-    options: ["Processo de absorção de nutrientes pelas plantas", "Processo de conversão de luz em energia", "Reação química que ocorre no estômago", "Reação de digestão em plantas"],
-    answer: "Processo de conversão de luz em energia"
-  }
+const quizData = [
+    {
+        question: "Qual é a principal causa do desmatamento nas florestas tropicais?",
+        options: [
+            "Expansão da agricultura e pecuária",
+            "Construção de infraestrutura urbana",
+            "Turismo não controlado",
+            "Mudanças climáticas naturais"
+        ],
+        correctAnswer: "Expansão da agricultura e pecuária"
+    },
+    {
+        question: "O que ocorre com a biodiversidade quando grandes áreas de floresta são desmatadas?",
+        options: [
+            "A biodiversidade aumenta devido ao aumento de atividades humanas",
+            "A biodiversidade diminui, levando à extinção de espécies",
+            "A biodiversidade se mantém estável, mas com novas espécies adaptadas",
+            "A biodiversidade não é afetada, pois as florestas se regeneram rapidamente"
+        ],
+        correctAnswer: "A biodiversidade diminui, levando à extinção de espécies"
+    },
+    {
+        question: "Qual é a principal consequência do desmatamento para as mudanças climáticas?",
+        options: [
+            "Aumento da captura de carbono",
+            "Redução da quantidade de oxigênio na atmosfera",
+            "Emissão de gases de efeito estufa devido à queima e decomposição de árvores",
+            "Diminuição da quantidade de chuvas nas áreas desmatadas"
+        ],
+        correctAnswer: "Emissão de gases de efeito estufa devido à queima e decomposição de árvores"
+    },
+    {
+        question: "De que forma o desmatamento afeta as populações indígenas?",
+        options: [
+            "Cria novas oportunidades de trabalho e desenvolvimento",
+            "Destrói os habitats naturais e compromete a sobrevivência das culturas indígenas",
+            "Gera mais fontes de energia elétrica para as comunidades",
+            "Melhora a saúde e a educação das populações locais"
+        ],
+        correctAnswer: "Destrói os habitats naturais e compromete a sobrevivência das culturas indígenas"
+    },
+    {
+        question: "Como o desmatamento pode afetar a saúde humana?",
+        options: [
+            "Aumentando a qualidade do ar e reduzindo doenças respiratórias",
+            "Aumentando a incidência de doenças transmitidas por vetores, como malária",
+            "Não afeta a saúde humana",
+            "Reduzindo a contaminação por poluição atmosférica"
+        ],
+        correctAnswer: "Aumentando a incidência de doenças transmitidas por vetores, como malária"
+    },
+    {
+        question: "Qual das alternativas abaixo é um efeito do desmatamento nas áreas de água doce?",
+        options: [
+            "Aumento da quantidade de água potável disponível",
+            "Diminuição da qualidade da água e aumento do assoreamento de rios",
+            "Melhora da qualidade da água devido à diminuição da erosão",
+            "Estabilidade dos recursos hídricos"
+        ],
+        correctAnswer: "Diminuição da qualidade da água e aumento do assoreamento de rios"
+    },
+    {
+        question: "O que a sociedade pode fazer para reduzir os impactos do desmatamento?",
+        options: [
+            "Expandir áreas urbanas para acomodar a população crescente",
+            "Promover a agricultura sustentável e o uso responsável dos recursos naturais",
+            "Aumentar o consumo de carne para promover a pecuária",
+            "Reduzir a quantidade de áreas protegidas nas florestas"
+        ],
+        correctAnswer: "Promover a agricultura sustentável e o uso responsável dos recursos naturais"
+    },
+    {
+        question: "Quais são os principais impactos econômicos do desmatamento para o futuro?",
+        options: [
+            "Aumento na produção de commodities agrícolas e crescimento rápido da economia",
+            "Perda de recursos naturais que sustentam muitas indústrias, como a farmacêutica e a madeira",
+            "Estabilidade econômica, sem impactos significativos a longo prazo",
+            "Menor dependência de recursos naturais e avanço em tecnologias alternativas"
+        ],
+        correctAnswer: "Perda de recursos naturais que sustentam muitas indústrias, como a farmacêutica e a madeira"
+    },
+    {
+        question: "Como o desmatamento pode afetar o clima global?",
+        options: [
+            "Diminui a quantidade de carbono na atmosfera",
+            "Aumenta a temperatura global devido à liberação de gases de efeito estufa",
+            "Reduz os níveis de água nos oceanos",
+            "Não tem impacto no clima global"
+        ],
+        correctAnswer: "Aumenta a temperatura global devido à liberação de gases de efeito estufa"
+    },
+    {
+        question: "Qual é o papel das tecnologias na luta contra o desmatamento?",
+        options: [
+            "Não há tecnologias que possam ajudar a reduzir o desmatamento",
+            "Tecnologias como imagens de satélite e monitoramento de áreas ajudam a detectar atividades ilegais de desmatamento",
+            "As tecnologias aumentam a produtividade agrícola e aceleram o desmatamento",
+            "A tecnologia é inútil, pois não pode substituir as ações humanas para salvar as florestas"
+        ],
+        correctAnswer: "Tecnologias como imagens de satélite e monitoramento de áreas ajudam a detectar atividades ilegais de desmatamento"
+    }
 ];
 
-let currentQuestionIndex = 0;
-let score = 0;
-
-const nextBtn = document.getElementById("next-btn");
-const questionContainer = document.getElementById("question-container");
+const quizContainer = document.getElementById("quiz");
+const submitBtn = document.getElementById("submit-btn");
 const resultContainer = document.getElementById("result");
 
-function loadQuestion() {
-  const currentQuestion = questions[currentQuestionIndex];
-  
-  questionContainer.innerHTML = `
-    <h2>${currentQuestion.question}</h2>
-    <div>
-      ${currentQuestion.options.map((option, index) => `
-        <button class="option-btn" onclick="checkAnswer('${option}')">${option}</button>
-      `).join('')}
-    </div>
-  `;
+function loadQuiz() {
+    quizData.forEach((questionData, index) => {
+        const questionElement = document.createElement("div");
+        questionElement.classList.add("question");
+
+        questionElement.innerHTML = `
+            <p>${questionData.question}</p>
+            ${questionData.options.map((option, i) => `
+                <label>
+                    <input type="radio" name="question${index}" value="${option}">
+                    ${option}
+                </label>
+            `).join('')}
+        `;
+
+        quizContainer.appendChild(questionElement);
+    });
 }
 
-function checkAnswer(selectedOption) {
-  const currentQuestion = questions[currentQuestionIndex];
+function showResult() {
+    const answers = Array.from(document.querySelectorAll('input[type="radio"]:checked'));
+    let score = 0;
 
-  if (selectedOption === currentQuestion.answer) {
-    score++;
-  }
+    answers.forEach(answer => {
+        const questionIndex = answer.name.replace('question', '');
+        if (answer.value === quizData[questionIndex].correctAnswer) {
+            score++;
+        }
+    });
 
-  if (currentQuestionIndex < questions.length - 1) {
-    currentQuestionIndex++;
-    loadQuestion();
-  } else {
-    resultContainer.innerHTML = `<h2>Você acertou ${score} de ${questions.length} perguntas!</h2>`;
-    nextBtn.style.display = "none"; // Desabilita o botão "Próxima Pergunta"
-  }
+    resultContainer.textContent = `Você acertou ${score} de ${quizData.length} questões.`;
 }
 
-nextBtn.addEventListener("click", loadQuestion);
+submitBtn.addEventListener("click", showResult);
 
-loadQuestion();
+loadQuiz();
