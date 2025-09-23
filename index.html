@@ -3,20 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz da Natureza</title>
+    <title>Quiz sobre Desmatamento</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="quiz-container">
-        <div id="quiz">
-            <h1>Quiz da Natureza</h1>
-            <div id="question-container">
-                <p id="question"></p>
-                <div id="answers">
-                    <!-- As respostas aparecerão aqui -->
-                </div>
-            </div>
-            <button id="next-btn" class="btn" style="display: none;">Próxima Pergunta</button>
+        <h1>Quiz sobre o Desmatamento</h1>
+        <div id="question-container">
+            <p id="question"></p>
+            <div id="answers"></div>
+        </div>
+        <button id="next-btn" class="btn" style="display: none;">Próxima Pergunta</button>
+        <div id="score-container" style="display: none;">
+            <h2>Você acertou <span id="score"></span> de <span id="total-questions"></span> perguntas!</h2>
         </div>
     </div>
 
