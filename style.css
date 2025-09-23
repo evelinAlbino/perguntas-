@@ -30,7 +30,7 @@ body {
 
 /* Estilo das perguntas */
 .question-container {
-    display: block;
+    display: none; /* Inicialmente, todas as perguntas estão ocultas */
     margin-bottom: 20px;
 }
 

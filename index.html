@@ -10,6 +10,7 @@
     <div class="quiz-container">
         <h1>Quiz sobre o Ensino Médio</h1>
 
+        <!-- Perguntas e opções serão exibidas aqui -->
         <div class="question-container">
             <p class="question">1. Qual é a fórmula da água?</p>
             <div class="options">
@@ -60,42 +61,42 @@
             </div>
         </div>
 
-        <button class="next-btn">Próxima Pergunta</button>
-        <button class="submit-btn">Enviar Respostas</button>
+        <button class="next-btn" onclick="nextQuestion()">Próxima Pergunta</button>
+        <button class="submit-btn" onclick="submitQuiz()">Enviar Respostas</button>
     </div>
 
     <script>
-        // Controle de navegação entre as perguntas
+        let currentQuestion = 0;
+        const questions = document.querySelectorAll('.question-container');
         const nextBtn = document.querySelector('.next-btn');
         const submitBtn = document.querySelector('.submit-btn');
-        const questionContainers = document.querySelectorAll('.question-container');
-        let currentQuestion = 0;
 
         // Inicializa o quiz mostrando apenas a primeira pergunta
-        questionContainers.forEach((container, index) => {
-            if (index !== 0) {
-                container.style.display = 'none';
-            }
-        });
+        function showQuestion(index) {
+            questions.forEach((q, i) => {
+                q.style.display = (i === index) ? 'block' : 'none';
+            });
+        }
 
-        nextBtn.addEventListener('click', () => {
-            // Verifica se há mais perguntas
-            if (currentQuestion < questionContainers.length - 1) {
-                questionContainers[currentQuestion].style.display = 'none';
+        // Avança para a próxima pergunta
+        function nextQuestion() {
+            if (currentQuestion < questions.length - 1) {
                 currentQuestion++;
-                questionContainers[currentQuestion].style.display = 'block';
+                showQuestion(currentQuestion);
             }
-            // Se for a última pergunta, mostra o botão de enviar
-            if (currentQuestion === questionContainers.length - 1) {
+            if (currentQuestion === questions.length - 1) {
                 nextBtn.style.display = 'none';
                 submitBtn.style.display = 'inline-block';
             }
-        });
+        }
 
-        // Funcionalidade do botão de enviar
-        submitBtn.addEventListener('click', () => {
-            alert("Respostas enviadas!");
-        });
+        // Envia o quiz
+        function submitQuiz() {
+            alert('Respostas enviadas!');
+        }
+
+        // Exibe a primeira pergunta ao carregar
+        showQuestion(currentQuestion);
     </script>
 </body>
 </html>
