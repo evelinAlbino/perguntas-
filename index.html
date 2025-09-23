@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz sobre Desmatamento</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Quiz da Natureza</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="quiz-container">
-        <h1>Quiz sobre Desmatamento</h1>
-        <div id="quiz"></div>
-        <button id="submit-btn">Submeter Respostas</button>
-        <div id="result"></div>
+        <div id="quiz">
+            <h1>Quiz da Natureza</h1>
+            <div id="question-container">
+                <p id="question"></p>
+                <div id="answers">
+                    <!-- As respostas aparecerão aqui -->
+                </div>
+            </div>
+            <button id="next-btn" class="btn" style="display: none;">Próxima Pergunta</button>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
